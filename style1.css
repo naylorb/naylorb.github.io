@@ -11,7 +11,7 @@ body, html {
     height: 100%;
     background-color: #f2f2f2;
   }
-  
-  #myImage {
-    transition: opacity 0.5s ease; /* Add a transition for opacity change */
+
+#myImage {
+    transition: opacity 1s ease; /* Add a transition for opacity change */
 }

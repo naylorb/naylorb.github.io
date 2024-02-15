@@ -7,15 +7,19 @@
   <link rel="stylesheet" href="style1.css">
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // You can use setTimeout to make the splash screen disappear after a certain amount of time
-      function fadeOutImage() {
+    // You can use setTimeout to make the splash screen disappear after a certain amount of time
+    function fadeOutImage() {
         var image = document.getElementById("myImage");
         image.style.opacity = '0'; // Set opacity to 0
         setTimeout(function() {
-          image.style.display = 'none'; // After the transition, hide the image
+            image.style.display = 'none'; // After the transition, hide the image
         }, 500); // Adjust the time to match the transition duration
-      }
-    });
+    }
+
+    // Call the fadeOutImage function after 3 seconds (for example)
+    setTimeout(fadeOutImage, 3000); // 3000 milliseconds = 3 seconds
+});
+
   </script>
 </head>
 <body>
