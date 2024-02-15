@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Screen</title>
   <link rel="stylesheet" href="style1.css">
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-  // You can use setTimeout to make the splash screen disappear after a certain amount of time
-  setTimeout(function() {
-    document.querySelector(".splash-screen").style.display = "none";
-  }, 10000); // This example will make the splash screen disappear after 10 seconds
-});
+      // You can use setTimeout to make the splash screen disappear after a certain amount of time
+      function fadeOutImage() {
+        var image = document.getElementById("myImage");
+        image.style.opacity = '0'; // Set opacity to 0
+        setTimeout(function() {
+          image.style.display = 'none'; // After the transition, hide the image
+        }, 500); // Adjust the time to match the transition duration
+      }
+    });
   </script>
-  <title>Splash Screen</title>
 </head>
 <body>
   <div class="splash-screen">
     <!-- Your splash screen content goes here -->
-    <img src="networking.png" alt="Logo">
+    <img id="myImage" src="networking.png" alt="Logo">
   </div>
   <script src="script.js"></script>
 </body>
