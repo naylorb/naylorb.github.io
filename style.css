@@ -23,16 +23,47 @@ html {
   scroll-behavior: smooth;
 }
 
-#submit {
-    background: var(--hacker-green);
-    border: none;
-    color: white;
-    padding: 12px 28px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 300px; /* Adjust the width as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px; /* Adjust the height as needed */
+}
+
+#submit {
+  background: var(--hacker-green);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#submit:hover {
+  background: #6b9e37; /* Change color on hover */
+}
+
 body {
     /* background: rgb(63, 99, 142); */
     background: var(--optional-btn-color);
