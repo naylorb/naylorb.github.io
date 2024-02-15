@@ -15,8 +15,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-        'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -32,6 +31,14 @@ html {
 
 label {
   margin-bottom: 5px;
+}
+
+#title {
+  color: var(--hacker-green);
+}
+
+#title:hover {
+  color: #6b9e37;
 }
 
 input[type="text"],
@@ -58,6 +65,10 @@ textarea {
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+nav a:hover {
+  color: #6b9e37;
 }
 
 #submit:hover {
@@ -127,61 +138,7 @@ h1 {
   justify-content: center;
 }
 
-#slideshow {
-    overflow: hidden;
-    height: 510px;
-    width: 728px;
-    margin: 0 auto;
-  }
-
-  .slide-wrapper {
-    width: 2912px;
-    animation: slide 15s ease infinite;
-    
-  }
-
-  .slide {
-    float: left;
-    height: 510px;
-    width: 728px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .slide-img {
-  max-width:728px;
-  max-height:510px;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  }
-
-  @keyframes slide {
-    20% {
-      margin-left: 0px;
-    }
-    30% {
-      margin-left: -728px;
-    }
-    50% {
-      margin-left: -728px;
-    }
-    60% {
-      margin-left: -1456px;
-    }
-    70% {
-      margin-left: -1456px;
-    }
-    80% {
-      margin-left: -2184px;
-    }
-    90% {
-      margin-left: -2184px;
-    }
-  }
-
-  .box1, .box2 {
+.box1, .box2 {
     width: 50%;
     float: left;
     padding: 20px;
@@ -193,24 +150,23 @@ h1 {
     align-items: center;
   }
 
-  table {
+table {
     border: 1px solid;
     border-collapse: collapse; 
     border-radius: 5px;
     width: 100%; 
   }
 
-  th, td {
+th, td {
     border: 1px solid;
     padding: 8px; 
   }
 
-  .logo::after {
+.logo::after {
     content: "CTF Playground";
-
   }
 
-  .hover-text:hover .logo::after{
+.hover-text:hover .logo::after{
     content: "Learn Cyber Online!";
     color: var(--hacker-green);
     opacity: 1;
@@ -226,45 +182,6 @@ footer {
   align-self: center;
   justify-content: center;
   align-items: center;
-}
-
-.youtube-video {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  height: 80vh;
-}
-
-/* Responsive Design @media query*/
-@media (max-width: 768px) {
-  nav {
-      font-size: 14px;
-  }
-  .box1, .box2 {
-      width: 100%;
-      margin: 0;
-  }
-  .slide {
-      width: 100%;
-  }
-  .image, .container  {
-    padding: 0; 
-    height: auto; 
-    margin: 0;
-  }
-}
-/* Responsive Design @media query*/
-@media (max-width: 480px) {
-  nav {
-      font-size: 12px;
-  }
-  .box1, .box2 {
-      padding: 10px;
-  }
-  .image, .container {
-    padding: 0; 
-    height: auto; 
-    margin: 0;
-  }
 }
 
 .column-right img {
@@ -295,11 +212,44 @@ footer {
   box-sizing: border-box;
 }
 
-h2 {
-  font-size: 3rem;
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; /* Adjust font size as needed */
+  line-height: 1.6; /* Increase line-height for better readability */
+  margin-bottom: 20px; /* Add some spacing between paragraphs */
+  color: #333; /* Set text color to a dark shade for contrast */
+  margin-left: 12%;
+  margin-right: 12%;
 }
 
-h5 {
-  font-size: 1.5rem;
-  margin-bottom: 1vh;
+p:first-child {
+  margin-top: 0; /* Remove top margin for the first paragraph */
+}
+
+p:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}
+
+p.intro {
+  font-size: 18px; /* Increase font size for introduction paragraphs */
+  font-weight: bold; /* Make introduction paragraphs bold */
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+p.highlight {
+  background-color: #f4f4f4; /* Add a subtle background color for highlighted paragraphs */
+  padding: 10px; /* Add padding for better visual separation */
+  border-left: 4px solid #3498db; /* Add a left border for emphasis */
+}
+
+p.note {
+  font-style: italic; /* Make note paragraphs italic */
+  color: #888; /* Use a muted color for note paragraphs */
+}
+
+p.warning {
+  color: #d9534f; /* Use a red color for warning paragraphs */
+  font-weight: bold; /* Make warning paragraphs bold */
 }
