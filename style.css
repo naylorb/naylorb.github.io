@@ -207,7 +207,7 @@ h1 {
 
   .logo::after {
     content: "CTF Playground";
-    
+
   }
 
   .hover-text:hover .logo::after{
