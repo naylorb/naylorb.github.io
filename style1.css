@@ -1,3 +1,27 @@
+:root {
+  --main-color: #212c42;
+  --avatar-border: #545454;
+  --moto-bg-color: #000f2b;
+  --hacker-green: #88cc14;
+  --cool-red: #a20606;
+  --logged-out-bg: #111b29;
+  --navbar-main-height: 85px;
+  --darkblue: #1c2331;
+  --darkblue-bg-color: #1c2538;
+  --optional-btn-color: #e9e9e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -14,4 +38,39 @@ body, html {
 
 #myImage {
     transition: opacity 1s ease; /* Add a transition for opacity change */
+}
+
+nav {
+  background: var(--main-color);
+  /* background: #363636; */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 12vw;
+  font-size: 16px;
+  border-bottom: solid black 1px;
+  margin-bottom: 10vh;
+}
+
+nav a {
+  color: var(--hacker-green);
+  margin-right: 2vw;
+}
+
+.logo {
+  color: var(--hacker-green);
+  font-size: 2.0rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+  transition: opacity 0.3s;
+  
+}
+
+.logo::after {
+  content: "CTF Playground";
 }

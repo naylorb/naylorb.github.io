@@ -125,7 +125,17 @@ h1 {
   justify-content: center;
   text-align: center;
 }
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f2f2f2;
+}
 
+#myImage {
+  transition: opacity 1s ease; /* Add a transition for opacity change */
+}
 .container {
   margin-bottom: 30vh;
 }
