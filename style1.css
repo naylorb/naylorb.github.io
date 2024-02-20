@@ -13,8 +13,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -26,15 +24,16 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-  }
+    background: var(--optional-btn-color);
+}
   
-  .splash-screen {
+.splash-screen {
+    margin-top: -16vh;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #f2f2f2;
-  }
+}
 
 #myImage {
     transition: opacity 1s ease; /* Add a transition for opacity change */
@@ -61,6 +60,10 @@ nav a {
   margin-right: 2vw;
 }
 
+nav a:hover {
+  color: #6b9e37;
+}
+
 .logo {
   color: var(--hacker-green);
   font-size: 2.0rem;
@@ -73,4 +76,18 @@ nav a {
 
 .logo::after {
   content: "CTF Playground";
+}
+
+.hover-text:hover .logo::after{
+  content: "Learn Cyber Online!";
+  color: var(--hacker-green);
+  opacity: 1;
+}
+
+#title {
+  color: var(--hacker-green);
+}
+
+#title:hover {
+  color: #6b9e37;
 }

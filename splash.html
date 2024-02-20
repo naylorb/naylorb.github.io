@@ -8,20 +8,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-    // You can use setTimeout to make the splash screen disappear after a certain amount of time
-    function fadeOutImage() {
-        var image = document.getElementById("myImage");
-        image.style.opacity = '0'; // Set opacity to 0
-        setTimeout(function() {
-            image.style.display = 'none'; // After the transition, hide the image
-        }, 500); // Adjust the time to match the transition duration
-    }
+    var image = document.getElementById("myImage");
+    image.addEventListener('mouseover', function() {
+        this.style.transform = 'scale(1.1)';
+        this.style.transition = 'transform 0.3s ease';
+      });
 
-    // Call the fadeOutImage function after 3 seconds (for example)
-    setTimeout(fadeOutImage, 3000); // 3000 milliseconds = 3 seconds
-    
+      image.addEventListener('mouseout', function() {
+        this.style.transform = 'scale(1)';
+        this.style.transition = 'transform 0.3s ease';
+      });
 });
-
   </script>
 </head>
 <body>
@@ -31,11 +28,13 @@
     </div>        
   <div class="nav-items">
     <a href=index.html>Home</a> <a href="#Learn">Learning Pathways</a> <a href="splash.html">Splash Screen</a>
-    </div>
+  </div>
 </nav>
   <div class="splash-screen">
     <!-- Your splash screen content goes here -->
     <img id="myImage" src="networking.png" alt="Logo">
+    <br>
   </div>
+  <h1 class="title" style="text-align: center; margin-top:-10vh;">We're workin on it! Come back later to see this page.</p>
 </body>
 </html>
